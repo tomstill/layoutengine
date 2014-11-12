@@ -1,0 +1,17 @@
+// mixin to serve media queries
+
+@mixin bp($point:0, $u:"px") {
+
+	@if ($mq) {
+
+		@media screen and (min-width:unquote($point + $u)) { @content; }
+
+	}
+
+	@else if ($point <= $mqlimit) {
+
+		@content;
+
+	}
+
+}
