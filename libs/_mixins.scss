@@ -1,6 +1,6 @@
 @mixin boxmodel($bm:"border-box"){
 
-	box-sizing:$bm;
+	box-sizing:unquote($bm);
 
 }
 
